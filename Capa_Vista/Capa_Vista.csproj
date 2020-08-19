@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6098417D-4B41-401F-A6BE-6B120F145DBB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Capa_Vista</RootNamespace>
+    <AssemblyName>Capa_Vista</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_action.Designer.cs">
+      <DependentUpon>frm_action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_privacy_policy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_privacy_policy.Designer.cs">
+      <DependentUpon>frm_privacy_policy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_facture.Designer.cs">
+      <DependentUpon>frm_facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_evaluate_worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_evaluate_worker.Designer.cs">
+      <DependentUpon>frm_evaluate_worker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_assign_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_assign_category.Designer.cs">
+      <DependentUpon>frm_assign_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_woker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_woker.Designer.cs">
+      <DependentUpon>frm_woker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_operation_perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_operation_perfil.Designer.cs">
+      <DependentUpon>frm_operation_perfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_operation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_operation.Designer.cs">
+      <DependentUpon>frm_operation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_module.Designer.cs">
+      <DependentUpon>frm_module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_client.Designer.cs">
+      <DependentUpon>frm_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_code.Designer.cs">
+      <DependentUpon>frm_code.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_document.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_document.Designer.cs">
+      <DependentUpon>frm_document.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_update.Designer.cs">
+      <DependentUpon>frm_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_modify.Designer.cs">
+      <DependentUpon>frm_modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_recover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_recover.Designer.cs">
+      <DependentUpon>frm_recover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_office.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_office.Designer.cs">
+      <DependentUpon>frm_office.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_employee.Designer.cs">
+      <DependentUpon>frm_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_post.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_post.Designer.cs">
+      <DependentUpon>frm_post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_category.Designer.cs">
+      <DependentUpon>frm_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\dts_factura.cs">
+      <DependentUpon>dts_factura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\dts_factura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dts_factura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_document_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_document_select.Designer.cs">
+      <DependentUpon>frm_document_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_people_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_people_select.Designer.cs">
+      <DependentUpon>frm_people_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_factura_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_factura_report.Designer.cs">
+      <DependentUpon>frm_factura_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_accion_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_accion_crud.Designer.cs">
+      <DependentUpon>frm_accion_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_contrato_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_contrato_select.Designer.cs">
+      <DependentUpon>frm_contrato_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_servicio_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_servicio_select.Designer.cs">
+      <DependentUpon>frm_servicio_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_client_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_client_select.Designer.cs">
+      <DependentUpon>frm_client_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_evaluate_worker_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_evaluate_worker_crud.Designer.cs">
+      <DependentUpon>frm_evaluate_worker_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_assign_category_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_assign_category_crud.Designer.cs">
+      <DependentUpon>frm_assign_category_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_woker_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_woker_crud.Designer.cs">
+      <DependentUpon>frm_woker_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_operation_perfil_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_operation_perfil_crud.Designer.cs">
+      <DependentUpon>frm_operation_perfil_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_operation_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_operation_crud.Designer.cs">
+      <DependentUpon>frm_operation_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_modulo_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_modulo_crud.Designer.cs">
+      <DependentUpon>frm_modulo_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_client_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_client_crud.Designer.cs">
+      <DependentUpon>frm_client_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_office_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_office_crud.Designer.cs">
+      <DependentUpon>frm_office_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_employee_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_employee_crud.Designer.cs">
+      <DependentUpon>frm_employee_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_document_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_document_crud.Designer.cs">
+      <DependentUpon>frm_document_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_post_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_post_crud.Designer.cs">
+      <DependentUpon>frm_post_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_category_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_category_crud.Designer.cs">
+      <DependentUpon>frm_category_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_establish_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_establish_crud.Designer.cs">
+      <DependentUpon>frm_establish_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_role_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_role_crud.Designer.cs">
+      <DependentUpon>frm_role_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_main.Designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_message_ok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_message_ok.Designer.cs">
+      <DependentUpon>frm_message_ok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_people.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_people.Designer.cs">
+      <DependentUpon>frm_people.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Secondary\frm_people_crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_people_crud.Designer.cs">
+      <DependentUpon>frm_people_crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Main\frm_role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_role.Designer.cs">
+      <DependentUpon>frm_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_Main\frm_blur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Main\frm_blur.Designer.cs">
+      <DependentUpon>frm_blur.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CircularPictureBox.resx">
+      <DependentUpon>CircularPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_action.resx">
+      <DependentUpon>frm_action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_privacy_policy.resx">
+      <DependentUpon>frm_privacy_policy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_facture.resx">
+      <DependentUpon>frm_facture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_evaluate_worker.resx">
+      <DependentUpon>frm_evaluate_worker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_assign_category.resx">
+      <DependentUpon>frm_assign_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_woker.resx">
+      <DependentUpon>frm_woker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_operation_perfil.resx">
+      <DependentUpon>frm_operation_perfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_operation.resx">
+      <DependentUpon>frm_operation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_module.resx">
+      <DependentUpon>frm_module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_client.resx">
+      <DependentUpon>frm_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_code.resx">
+      <DependentUpon>frm_code.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_document.resx">
+      <DependentUpon>frm_document.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_update.resx">
+      <DependentUpon>frm_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_modify.resx">
+      <DependentUpon>frm_modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_recover.resx">
+      <DependentUpon>frm_recover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_office.resx">
+      <DependentUpon>frm_office.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_employee.resx">
+      <DependentUpon>frm_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_post.resx">
+      <DependentUpon>frm_post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_category.resx">
+      <DependentUpon>frm_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_document_select.resx">
+      <DependentUpon>frm_document_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_people_select.resx">
+      <DependentUpon>frm_people_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_factura_report.resx">
+      <DependentUpon>frm_factura_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_accion_crud.resx">
+      <DependentUpon>frm_accion_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_contrato_select.resx">
+      <DependentUpon>frm_contrato_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_servicio_select.resx">
+      <DependentUpon>frm_servicio_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_client_select.resx">
+      <DependentUpon>frm_client_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_evaluate_worker_crud.resx">
+      <DependentUpon>frm_evaluate_worker_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_assign_category_crud.resx">
+      <DependentUpon>frm_assign_category_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_woker_crud.resx">
+      <DependentUpon>frm_woker_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_operation_perfil_crud.resx">
+      <DependentUpon>frm_operation_perfil_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_operation_crud.resx">
+      <DependentUpon>frm_operation_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_modulo_crud.resx">
+      <DependentUpon>frm_modulo_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_client_crud.resx">
+      <DependentUpon>frm_client_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_office_crud.resx">
+      <DependentUpon>frm_office_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_employee_crud.resx">
+      <DependentUpon>frm_employee_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_document_crud.resx">
+      <DependentUpon>frm_document_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_post_crud.resx">
+      <DependentUpon>frm_post_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_category_crud.resx">
+      <DependentUpon>frm_category_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_establish_crud.resx">
+      <DependentUpon>frm_establish_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_role_crud.resx">
+      <DependentUpon>frm_role_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_main.resx">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_message_ok.resx">
+      <DependentUpon>frm_message_ok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_people.resx">
+      <DependentUpon>frm_people.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_people_crud.resx">
+      <DependentUpon>frm_people_crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Main\frm_role.resx">
+      <DependentUpon>frm_role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="_Main\frm_blur.resx">
+      <DependentUpon>frm_blur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\ifm_factura.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="_Secondary\dts_factura.xsc">
+      <DependentUpon>dts_factura.xsd</DependentUpon>
+    </None>
+    <None Include="_Secondary\dts_factura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dts_factura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="_Secondary\dts_factura.xss">
+      <DependentUpon>dts_factura.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Controlador\Capa_Controlador.csproj">
+      <Project>{edfef045-727a-4ab5-b8ee-e342d4fb0246}</Project>
+      <Name>Capa_Controlador</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
