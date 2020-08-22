@@ -123,7 +123,8 @@
             this.dtgTablePeople.Enabled = false;
             this.dtgTablePeople.EnableHeadersVisualStyles = false;
             this.dtgTablePeople.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(200)))), ((int)(((byte)(242)))));
-            this.dtgTablePeople.Location = new System.Drawing.Point(0, 103);
+            this.dtgTablePeople.Location = new System.Drawing.Point(0, 158);
+            this.dtgTablePeople.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgTablePeople.MultiSelect = false;
             this.dtgTablePeople.Name = "dtgTablePeople";
             this.dtgTablePeople.ReadOnly = true;
@@ -132,7 +133,7 @@
             this.dtgTablePeople.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgTablePeople.ShowCellToolTips = false;
             this.dtgTablePeople.ShowEditingIcon = false;
-            this.dtgTablePeople.Size = new System.Drawing.Size(1089, 593);
+            this.dtgTablePeople.Size = new System.Drawing.Size(1634, 912);
             this.dtgTablePeople.TabIndex = 0;
             // 
             // label18
@@ -140,9 +141,10 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(5, 73);
+            this.label18.Location = new System.Drawing.Point(8, 112);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(51, 15);
+            this.label18.Size = new System.Drawing.Size(72, 22);
             this.label18.TabIndex = 39;
             this.label18.Text = "Buscar";
             // 
@@ -150,9 +152,10 @@
             // 
             this.txtSearch.BackColor = System.Drawing.SystemColors.Control;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtSearch.Location = new System.Drawing.Point(62, 73);
+            this.txtSearch.Location = new System.Drawing.Point(93, 112);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(224, 21);
+            this.txtSearch.Size = new System.Drawing.Size(334, 28);
             this.txtSearch.TabIndex = 38;
             // 
             // label19
@@ -160,9 +163,10 @@
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label19.Location = new System.Drawing.Point(3, 9);
+            this.label19.Location = new System.Drawing.Point(4, 14);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(136, 25);
+            this.label19.Size = new System.Drawing.Size(204, 38);
             this.label19.TabIndex = 43;
             this.label19.Text = "PERSONAS";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -178,9 +182,10 @@
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(343, 63);
+            this.btnAdd.Location = new System.Drawing.Point(514, 97);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(109, 34);
+            this.btnAdd.Size = new System.Drawing.Size(164, 52);
             this.btnAdd.TabIndex = 44;
             this.btnAdd.Text = "Agregar";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -198,9 +203,10 @@
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(469, 63);
+            this.btnUpdate.Location = new System.Drawing.Point(704, 97);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(109, 34);
+            this.btnUpdate.Size = new System.Drawing.Size(164, 52);
             this.btnUpdate.TabIndex = 46;
             this.btnUpdate.Text = "Editar";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -218,9 +224,10 @@
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(595, 64);
+            this.btnDelete.Location = new System.Drawing.Point(892, 98);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 34);
+            this.btnDelete.Size = new System.Drawing.Size(164, 52);
             this.btnDelete.TabIndex = 47;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -234,7 +241,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(1089, 696);
+            this.shapeContainer1.Size = new System.Drawing.Size(1634, 1071);
             this.shapeContainer1.TabIndex = 48;
             this.shapeContainer1.TabStop = false;
             // 
@@ -260,9 +267,10 @@
             this.btnEstablish.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstablish.ForeColor = System.Drawing.Color.Black;
             this.btnEstablish.Image = ((System.Drawing.Image)(resources.GetObject("btnEstablish.Image")));
-            this.btnEstablish.Location = new System.Drawing.Point(721, 64);
+            this.btnEstablish.Location = new System.Drawing.Point(1082, 98);
+            this.btnEstablish.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEstablish.Name = "btnEstablish";
-            this.btnEstablish.Size = new System.Drawing.Size(127, 34);
+            this.btnEstablish.Size = new System.Drawing.Size(190, 52);
             this.btnEstablish.TabIndex = 49;
             this.btnEstablish.Text = " Establecer";
             this.btnEstablish.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -275,7 +283,7 @@
             this.clave.HeaderText = "ID";
             this.clave.Name = "clave";
             this.clave.ReadOnly = true;
-            this.clave.Width = 44;
+            this.clave.Width = 63;
             // 
             // rfc
             // 
@@ -283,7 +291,7 @@
             this.rfc.HeaderText = "RFC";
             this.rfc.Name = "rfc";
             this.rfc.ReadOnly = true;
-            this.rfc.Width = 57;
+            this.rfc.Width = 84;
             // 
             // foto
             // 
@@ -292,7 +300,7 @@
             this.foto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.foto.Name = "foto";
             this.foto.ReadOnly = true;
-            this.foto.Width = 76;
+            this.foto.Width = 105;
             // 
             // nombre
             // 
@@ -300,7 +308,7 @@
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
-            this.nombre.Width = 81;
+            this.nombre.Width = 113;
             // 
             // apellido_paterno
             // 
@@ -308,6 +316,7 @@
             this.apellido_paterno.HeaderText = "Ap.Paterno";
             this.apellido_paterno.Name = "apellido_paterno";
             this.apellido_paterno.ReadOnly = true;
+            this.apellido_paterno.Width = 144;
             // 
             // apellido_materno
             // 
@@ -315,7 +324,7 @@
             this.apellido_materno.HeaderText = "Ap.Materno";
             this.apellido_materno.Name = "apellido_materno";
             this.apellido_materno.ReadOnly = true;
-            this.apellido_materno.Width = 103;
+            this.apellido_materno.Width = 146;
             // 
             // sexo
             // 
@@ -323,7 +332,7 @@
             this.sexo.HeaderText = "Sexo";
             this.sexo.Name = "sexo";
             this.sexo.ReadOnly = true;
-            this.sexo.Width = 62;
+            this.sexo.Width = 89;
             // 
             // telefono_personal
             // 
@@ -331,7 +340,7 @@
             this.telefono_personal.HeaderText = "Tel.Personal";
             this.telefono_personal.Name = "telefono_personal";
             this.telefono_personal.ReadOnly = true;
-            this.telefono_personal.Width = 111;
+            this.telefono_personal.Width = 158;
             // 
             // telefono_pariente
             // 
@@ -339,7 +348,7 @@
             this.telefono_pariente.HeaderText = "Tel.Pariente";
             this.telefono_pariente.Name = "telefono_pariente";
             this.telefono_pariente.ReadOnly = true;
-            this.telefono_pariente.Width = 108;
+            this.telefono_pariente.Width = 154;
             // 
             // correo_electronico
             // 
@@ -347,7 +356,7 @@
             this.correo_electronico.HeaderText = "Correo electrónico";
             this.correo_electronico.Name = "correo_electronico";
             this.correo_electronico.ReadOnly = true;
-            this.correo_electronico.Width = 135;
+            this.correo_electronico.Width = 191;
             // 
             // localidad
             // 
@@ -355,7 +364,7 @@
             this.localidad.HeaderText = "Localidad";
             this.localidad.Name = "localidad";
             this.localidad.ReadOnly = true;
-            this.localidad.Width = 93;
+            this.localidad.Width = 130;
             // 
             // nombre_calle
             // 
@@ -363,7 +372,7 @@
             this.nombre_calle.HeaderText = "Nom.Calle";
             this.nombre_calle.Name = "nombre_calle";
             this.nombre_calle.ReadOnly = true;
-            this.nombre_calle.Width = 97;
+            this.nombre_calle.Width = 136;
             // 
             // numero_calle
             // 
@@ -371,7 +380,7 @@
             this.numero_calle.HeaderText = "No.Calle";
             this.numero_calle.Name = "numero_calle";
             this.numero_calle.ReadOnly = true;
-            this.numero_calle.Width = 85;
+            this.numero_calle.Width = 121;
             // 
             // municipio
             // 
@@ -379,7 +388,7 @@
             this.municipio.HeaderText = "Municipio";
             this.municipio.Name = "municipio";
             this.municipio.ReadOnly = true;
-            this.municipio.Width = 93;
+            this.municipio.Width = 128;
             // 
             // estado
             // 
@@ -387,7 +396,7 @@
             this.estado.HeaderText = "Estado";
             this.estado.Name = "estado";
             this.estado.ReadOnly = true;
-            this.estado.Width = 74;
+            this.estado.Width = 106;
             // 
             // codigo_postal
             // 
@@ -395,7 +404,7 @@
             this.codigo_postal.HeaderText = "Código postal";
             this.codigo_postal.Name = "codigo_postal";
             this.codigo_postal.ReadOnly = true;
-            this.codigo_postal.Width = 108;
+            this.codigo_postal.Width = 153;
             // 
             // fecha_registro
             // 
@@ -403,7 +412,7 @@
             this.fecha_registro.HeaderText = "Fecha registro";
             this.fecha_registro.Name = "fecha_registro";
             this.fecha_registro.ReadOnly = true;
-            this.fecha_registro.Width = 112;
+            this.fecha_registro.Width = 159;
             // 
             // usuario
             // 
@@ -411,7 +420,7 @@
             this.usuario.HeaderText = "Usuario";
             this.usuario.Name = "usuario";
             this.usuario.ReadOnly = true;
-            this.usuario.Width = 80;
+            this.usuario.Width = 113;
             // 
             // contrasena
             // 
@@ -419,7 +428,8 @@
             this.contrasena.HeaderText = "Contraseña";
             this.contrasena.Name = "contrasena";
             this.contrasena.ReadOnly = true;
-            this.contrasena.Width = 103;
+            this.contrasena.Visible = false;
+            this.contrasena.Width = 147;
             // 
             // rol
             // 
@@ -427,7 +437,7 @@
             this.rol.HeaderText = "Rol";
             this.rol.Name = "rol";
             this.rol.ReadOnly = true;
-            this.rol.Width = 52;
+            this.rol.Width = 74;
             // 
             // statu
             // 
@@ -435,31 +445,33 @@
             this.statu.HeaderText = "Estado";
             this.statu.Name = "statu";
             this.statu.ReadOnly = true;
-            this.statu.Width = 74;
+            this.statu.Width = 106;
             // 
             // fecha_modificar
             // 
+            this.fecha_modificar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.fecha_modificar.DataPropertyName = "fecha_modificar";
             this.fecha_modificar.HeaderText = "Fecha para modificar contraseña";
             this.fecha_modificar.Name = "fecha_modificar";
             this.fecha_modificar.ReadOnly = true;
-            this.fecha_modificar.Width = 219;
+            this.fecha_modificar.Width = 306;
             // 
             // estado_modificacion
             // 
+            this.estado_modificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.estado_modificacion.DataPropertyName = "estado_modificacion";
             this.estado_modificacion.HeaderText = "Estado de modificación de contraseña";
             this.estado_modificacion.Name = "estado_modificacion";
             this.estado_modificacion.ReadOnly = true;
-            this.estado_modificacion.Width = 185;
+            this.estado_modificacion.Width = 259;
             // 
             // frm_people
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1089, 696);
+            this.ClientSize = new System.Drawing.Size(1634, 1071);
             this.Controls.Add(this.btnEstablish);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -471,6 +483,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_people";
             this.Text = "frm_people";
             ((System.ComponentModel.ISupportInitialize)(this.dtgTablePeople)).EndInit();

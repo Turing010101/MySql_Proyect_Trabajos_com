@@ -43,6 +43,7 @@
             this.id_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rfc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foto = new System.Windows.Forms.DataGridViewImageColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido_paterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido_materno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,7 +68,6 @@
             this.nombre_jefe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha_modificar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado_modificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contrasena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTableEmployee)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +97,7 @@
             this.id_empleado,
             this.clave,
             this.rfc,
+            this.foto,
             this.nombre,
             this.apellido_paterno,
             this.apellido_materno,
@@ -121,7 +122,6 @@
             this.nombre_jefe,
             this.fecha_modificar,
             this.estado_modificacion,
-            this.empleado,
             this.contrasena});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(220)))), ((int)(((byte)(252)))));
@@ -292,6 +292,15 @@
             this.rfc.ReadOnly = true;
             this.rfc.Width = 84;
             // 
+            // foto
+            // 
+            this.foto.DataPropertyName = "foto";
+            this.foto.HeaderText = "Fotografía";
+            this.foto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.foto.Name = "foto";
+            this.foto.ReadOnly = true;
+            this.foto.Width = 105;
+            // 
             // nombre
             // 
             this.nombre.DataPropertyName = "nombre";
@@ -455,21 +464,23 @@
             // rfc_jefe
             // 
             this.rfc_jefe.DataPropertyName = "rfc_jefe";
-            this.rfc_jefe.HeaderText = "RFC jefe inmediato ";
+            this.rfc_jefe.HeaderText = "RFC jefe";
             this.rfc_jefe.Name = "rfc_jefe";
             this.rfc_jefe.ReadOnly = true;
-            this.rfc_jefe.Width = 202;
+            this.rfc_jefe.Width = 84;
             // 
             // nombre_jefe
             // 
+            this.nombre_jefe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.nombre_jefe.DataPropertyName = "nombre_jefe";
-            this.nombre_jefe.HeaderText = "Nombre jefe inmediato";
+            this.nombre_jefe.HeaderText = "Jefe inmediato";
             this.nombre_jefe.Name = "nombre_jefe";
             this.nombre_jefe.ReadOnly = true;
-            this.nombre_jefe.Width = 222;
+            this.nombre_jefe.Width = 159;
             // 
             // fecha_modificar
             // 
+            this.fecha_modificar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.fecha_modificar.DataPropertyName = "fecha_modificar";
             this.fecha_modificar.HeaderText = "Fecha para modificar contraseña";
             this.fecha_modificar.Name = "fecha_modificar";
@@ -478,20 +489,12 @@
             // 
             // estado_modificacion
             // 
+            this.estado_modificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.estado_modificacion.DataPropertyName = "estado_modificacion";
             this.estado_modificacion.HeaderText = "Estado de modificación de contraseña";
             this.estado_modificacion.Name = "estado_modificacion";
             this.estado_modificacion.ReadOnly = true;
             this.estado_modificacion.Width = 259;
-            // 
-            // empleado
-            // 
-            this.empleado.DataPropertyName = "empleado";
-            this.empleado.HeaderText = "Empleado";
-            this.empleado.Name = "empleado";
-            this.empleado.ReadOnly = true;
-            this.empleado.Visible = false;
-            this.empleado.Width = 132;
             // 
             // contrasena
             // 
@@ -541,6 +544,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id_empleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn clave;
         private System.Windows.Forms.DataGridViewTextBoxColumn rfc;
+        private System.Windows.Forms.DataGridViewImageColumn foto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido_paterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido_materno;
@@ -565,7 +569,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_jefe;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_modificar;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado_modificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn empleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn contrasena;
     }
 }
