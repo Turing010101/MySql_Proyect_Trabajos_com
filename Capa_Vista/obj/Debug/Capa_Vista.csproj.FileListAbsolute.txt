@@ -558,3 +558,4 @@ C:\Users\Edwin\Desktop\10°\Proyect\MySql_Proyect_Trabajos_com\Capa_Vista\obj\De
 C:\Users\Edwin\Desktop\10°\Proyect\MySql_Proyect_Trabajos_com\Capa_Vista\obj\Debug\Capa_Vista.csproj.CopyComplete
 C:\Users\Edwin\Desktop\10°\Proyect\MySql_Proyect_Trabajos_com\Capa_Vista\obj\Debug\Capa_Vista.exe
 C:\Users\Edwin\Desktop\10°\Proyect\MySql_Proyect_Trabajos_com\Capa_Vista\obj\Debug\Capa_Vista.pdb
+C:\Users\Edwin\Desktop\10°\Proyect\MySql_Proyect_Trabajos_com\Capa_Vista\obj\Debug\Capa_Vista.frm_boss_select.resources

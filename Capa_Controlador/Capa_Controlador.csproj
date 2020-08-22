@@ -76,6 +76,7 @@
     <Compile Include="_Main\C_message.cs" />
     <Compile Include="_Main\C_categoria.cs" />
     <Compile Include="_Secondary\C_document_select.cs" />
+    <Compile Include="_Secondary\C_jefe_select.cs" />
     <Compile Include="_Secondary\C_persona_select.cs" />
     <Compile Include="_Secondary\C_factura_report.cs" />
     <Compile Include="_Secondary\C_accion_crud.cs" />

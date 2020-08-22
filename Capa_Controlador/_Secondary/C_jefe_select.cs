@@ -10,7 +10,7 @@ using Capa_Modelo._DAO;
 
 namespace Capa_Controlador
 {
-    class C_persona_select
+    class C_jefe_select
     {
         Vo_persona e_persona = new Vo_persona();
 
@@ -18,21 +18,21 @@ namespace Capa_Controlador
 
         C_message c_message;
 
-        Capa_Vista.frm_people_select frm;
+        Capa_Vista.frm_boss_select frm;
 
         frm_blur overlayForm;
 
         Capa_Vista.frm_message_ok message_box;
 
-        public C_persona_select()
+        public C_jefe_select()
         {
-            frm = new Capa_Vista.frm_people_select();
+            frm = new Capa_Vista.frm_boss_select();
             c_message = C_message.getInstancia();
             message_box = c_message.formulario();
 
             InitializeEvents();
         }
-        public frm_people_select getFormulario()
+        public frm_boss_select getFormulario()
         {
             return frm;
         }
@@ -42,11 +42,11 @@ namespace Capa_Controlador
            
             frm.Load += new EventHandler(frm_people_Load);
             frm.btnSelect.Click += new EventHandler(btnSelect_Click);
-            frm.dtgTablePeopleS.CellClick += new DataGridViewCellEventHandler(dtgTablePeople_CellClick);
-            frm.dtgTablePeopleS.Layout += new LayoutEventHandler(dtgTableClient_Layout);
+            frm.dtgTableBossS.CellClick += new DataGridViewCellEventHandler(dtgTablePeople_CellClick);
+            frm.dtgTableBossS.Layout += new LayoutEventHandler(dtgTableClient_Layout);
             frm.txtSearch.KeyPress += new KeyPressEventHandler(txtSearch_KeyPress);
-            frm.dtgTablePeopleS.CellMouseEnter += new DataGridViewCellEventHandler(dtgTableClient_CellMouseEnter);
-            frm.dtgTablePeopleS.CellMouseLeave += new DataGridViewCellEventHandler(dtgTableClient_CellMouseLeave);
+            frm.dtgTableBossS.CellMouseEnter += new DataGridViewCellEventHandler(dtgTableClient_CellMouseEnter);
+            frm.dtgTableBossS.CellMouseLeave += new DataGridViewCellEventHandler(dtgTableClient_CellMouseLeave);
             frm.ptbClose.Click += new EventHandler(ptbClose_Click);
 
         }
@@ -54,8 +54,8 @@ namespace Capa_Controlador
         private void read_client(object sender = null, EventArgs e = null)
         {
             DataTable dt = pxy_persona.READ();
-            frm.dtgTablePeopleS.DataSource = dt;
-            frm.dtgTablePeopleS.ClearSelection();
+            frm.dtgTableBossS.DataSource = dt;
+            frm.dtgTableBossS.ClearSelection();
             e_persona.Clave = 0;
         }
 
@@ -83,14 +83,11 @@ namespace Capa_Controlador
         private void dtgTablePeople_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (!(e.RowIndex > -1)) { return; }
-            e_persona.Clave = Convert.ToUInt16(frm.dtgTablePeopleS.Rows[e.RowIndex].Cells["clave"].Value.ToString());
-            e_persona.Rfc = frm.dtgTablePeopleS.Rows[e.RowIndex].Cells["rfc"].Value.ToString();
+            e_persona.Clave = Convert.ToUInt16(frm.dtgTableBossS.Rows[e.RowIndex].Cells["clave"].Value.ToString());
+            e_persona.Rfc = frm.dtgTableBossS.Rows[e.RowIndex].Cells["rfc"].Value.ToString();
 
-            C_trabajador_crud.nombre_persona = frm.dtgTablePeopleS.Rows[e.RowIndex].Cells["nombre"].Value.ToString() + " " + frm.dtgTablePeopleS.Rows[e.RowIndex].Cells["apellido_paterno"].Value.ToString() + " " + frm.dtgTablePeopleS.Rows[e.RowIndex].Cells["apellido_materno"].Value.ToString();
-            C_trabajador_crud.rfc_persona = e_persona.Rfc.ToString();
-
-            C_empleado_crud.nombre_persona = frm.dtgTablePeopleS.Rows[e.RowIndex].Cells["nombre"].Value.ToString() + " " + frm.dtgTablePeopleS.Rows[e.RowIndex].Cells["apellido_paterno"].Value.ToString() + " " + frm.dtgTablePeopleS.Rows[e.RowIndex].Cells["apellido_materno"].Value.ToString();
-            C_empleado_crud.rfc_persona = e_persona.Rfc.ToString();
+            C_empleado_crud.nombre_jefe = frm.dtgTableBossS.Rows[e.RowIndex].Cells["nombre"].Value.ToString() + " " + frm.dtgTableBossS.Rows[e.RowIndex].Cells["apellido_paterno"].Value.ToString() + " " + frm.dtgTableBossS.Rows[e.RowIndex].Cells["apellido_materno"].Value.ToString();
+            C_empleado_crud.rfc_jefe = e_persona.Rfc.ToString();
         }
         private void btnSelect_Click(object sender, EventArgs e)
         {
@@ -108,7 +105,7 @@ namespace Capa_Controlador
        
         private void dtgTableClient_Layout(object sender, LayoutEventArgs e)
         {
-            frm.dtgTablePeopleS.ClearSelection();
+            frm.dtgTableBossS.ClearSelection();
         }
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -116,8 +113,8 @@ namespace Capa_Controlador
             {
                 e_persona.Expresion = frm.txtSearch.Text;
 
-                frm.dtgTablePeopleS.DataSource = pxy_persona.SEARCH(e_persona);
-                frm.dtgTablePeopleS.ClearSelection();
+                frm.dtgTableBossS.DataSource = pxy_persona.SEARCH(e_persona);
+                frm.dtgTableBossS.ClearSelection();
             }
             else
             {
@@ -128,14 +125,14 @@ namespace Capa_Controlador
         {
             if (e.RowIndex > -1)
             {
-                frm.dtgTablePeopleS.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(73, 199, 241);
+                frm.dtgTableBossS.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(73, 199, 241);
             }
         }
         private void dtgTableClient_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
             {
-                frm.dtgTablePeopleS.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(115, 218, 251);
+                frm.dtgTableBossS.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(115, 218, 251);
             }
         }
     }

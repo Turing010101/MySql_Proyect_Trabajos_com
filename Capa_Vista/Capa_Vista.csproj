@@ -209,6 +209,12 @@
     <Compile Include="_Secondary\frm_document_select.Designer.cs">
       <DependentUpon>frm_document_select.cs</DependentUpon>
     </Compile>
+    <Compile Include="_Secondary\frm_boss_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Secondary\frm_boss_select.Designer.cs">
+      <DependentUpon>frm_boss_select.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Secondary\frm_people_select.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="_Secondary\frm_document_select.resx">
       <DependentUpon>frm_document_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Secondary\frm_boss_select.resx">
+      <DependentUpon>frm_boss_select.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_Secondary\frm_people_select.resx">
       <DependentUpon>frm_people_select.cs</DependentUpon>

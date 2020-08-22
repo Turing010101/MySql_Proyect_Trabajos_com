@@ -125,8 +125,10 @@ namespace Capa_Controlador
         {
             if (!(e.RowIndex > -1)) { return; }
             e_empleado.Clave = Convert.ToInt16(frm.dtgTableEmployee.Rows[e.RowIndex].Cells["id_empleado"].Value.ToString());
-            e_empleado.Rfc_persona = frm.dtgTableEmployee.Rows[e.RowIndex].Cells["empleado"].Value.ToString();
-            e_empleado.Rfc_jefe = frm.dtgTableEmployee.Rows[e.RowIndex].Cells["jefe"].Value.ToString();
+            e_empleado.Rfc_persona = frm.dtgTableEmployee.Rows[e.RowIndex].Cells["rfc"].Value.ToString();
+            e_empleado.Rfc_jefe = frm.dtgTableEmployee.Rows[e.RowIndex].Cells["rfc_jefe"].Value.ToString();
+            e_empleado.Nombre_persona = frm.dtgTableEmployee.Rows[e.RowIndex].Cells["nombre"].Value.ToString() + " " + frm.dtgTableEmployee.Rows[e.RowIndex].Cells["apellido_paterno"].Value.ToString() + " " + frm.dtgTableEmployee.Rows[e.RowIndex].Cells["apellido_materno"].Value.ToString();
+            e_empleado.Nombre_jefe = frm.dtgTableEmployee.Rows[e.RowIndex].Cells["nombre_jefe"].Value.ToString();
             e_empleado.Puesto = frm.dtgTableEmployee.Rows[e.RowIndex].Cells["puesto"].Value.ToString();
             e_empleado.Sucursal = frm.dtgTableEmployee.Rows[e.RowIndex].Cells["sucursal"].Value.ToString();
             e_empleado.Turno = frm.dtgTableEmployee.Rows[e.RowIndex].Cells["turno"].Value.ToString();

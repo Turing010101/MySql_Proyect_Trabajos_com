@@ -247,6 +247,30 @@
         nRB92523A10Hg5l+K911AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnBuscarJefeInmediato.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAAFKSURBVEhLzVY7bgIxEN02okkq
+        PgniGt4s9wCUKAhRI9Gl4ABcInfIFXIjOkoIz/GzZm3vGpuPUjzjeR7Ps2fHNsVQTUdPr6vdw3hzvCYQ
+        E7FP/QIobiFCmNh/QiS75fKH5CXALkwsCmoeTY24Iv6BELbdqT4PsM2vdiIXg5wj+LCQsK2Tw8XgztG2
+        R9xlR00Yqtn4Wb2vY4CfmJculIl2oXumjnYTF4M7R9sekbOjx2q9x20wUB/bk63ngDPjYSF+ePlh24rh
+        Rb1N6OcC4+yjqQnloF/Ov+TljD446YOmJnRO6kxa9AEXKfKAMT4VnpCwm7gjU9ImQnBRnlBsR5zYKxff
+        5ASCC0MaPaFYMZBveDCDQvD1hBIgg4XGAetjjYwX1gYRnAvrk/yfgQtKTh3KL0WMxWDOiTseFGIxZCO1
+        vLORemAvRvwK2hS/bTBQAwwjg58AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnBuscarEmpleado.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAAFKSURBVEhLzVY7bgIxEN02okkq
+        PgniGt4s9wCUKAhRI9Gl4ABcInfIFXIjOkoIz/GzZm3vGpuPUjzjeR7Ps2fHNsVQTUdPr6vdw3hzvCYQ
+        E7FP/QIobiFCmNh/QiS75fKH5CXALkwsCmoeTY24Iv6BELbdqT4PsM2vdiIXg5wj+LCQsK2Tw8XgztG2
+        R9xlR00Yqtn4Wb2vY4CfmJculIl2oXumjnYTF4M7R9sekbOjx2q9x20wUB/bk63ngDPjYSF+ePlh24rh
+        Rb1N6OcC4+yjqQnloF/Ov+TljD446YOmJnRO6kxa9AEXKfKAMT4VnpCwm7gjU9ImQnBRnlBsR5zYKxff
+        5ASCC0MaPaFYMZBveDCDQvD1hBIgg4XGAetjjYwX1gYRnAvrk/yfgQtKTh3KL0WMxWDOiTseFGIxZCO1
+        vLORemAvRvwK2hS/bTBQAwwjg58AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="btnAcept.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1

@@ -24,6 +24,15 @@ namespace Capa_Controlador
     
         C_message c_message;
 
+        C_persona_select frm_select_people;
+        C_jefe_select frm_select_boss;
+
+        public static string rfc_persona;
+        public static string nombre_persona;
+
+        public static string rfc_jefe;
+        public static string nombre_jefe;
+
         Capa_Vista.frm_employee_crud frm;
         frm_blur overlayForm;
 
@@ -32,8 +41,6 @@ namespace Capa_Controlador
         string mensaje_puesto = "--Elegir--";
         string mensaje_sucursal = "--Elegir--";
         string mensaje_turno = "--Elegir--";
-        string mensaje_persona = "--Elegir--";
-        string mensaje_jefe = "--Elegir--";
 
         public C_empleado_crud(Vo_empleado empleado = null)
         {
@@ -46,16 +53,16 @@ namespace Capa_Controlador
             read_office();
             read_post();
             read_turn();
-            read_people();
-            read_boss();
 
             if (empleado != null)
             {
                 vo_empleado.Clave = empleado.Clave;
                 vo_empleado.Operacion = empleado.Operacion;
 
-                mensaje_persona = empleado.Rfc_persona;
-                mensaje_jefe = empleado.Rfc_jefe;
+                frm.txtEmpleado.Text = empleado.Nombre_persona;
+                frm.txtJefeInmediato.Text = empleado.Nombre_jefe;
+                rfc_persona = empleado.Rfc_persona;
+                rfc_jefe = empleado.Rfc_jefe;
 
                 mensaje_puesto = empleado.Puesto.ToString();
                 mensaje_sucursal = empleado.Sucursal.ToString();
@@ -73,13 +80,13 @@ namespace Capa_Controlador
             frm.ptbClose.Click += new EventHandler(ptbClose_Click);
             frm.pnlTop.MouseDown += new MouseEventHandler(pnlTop_MouseDown);
             frm.btnAcept.Click += new EventHandler(btnInsert_Click);
+            
+            frm.btnBuscarEmpleado.Click += new EventHandler(btnSelectEmpleado_Click);
+            frm.btnBuscarJefeInmediato.Click += new EventHandler(btnSelectJefe_Click);
 
             frm.cmbOffice.KeyDown += new KeyEventHandler(cmb_KeyDown);
             frm.cmbPost.KeyDown += new KeyEventHandler(cmb_KeyDown);
             frm.cmbTurn.KeyDown += new KeyEventHandler(cmb_KeyDown);
-            frm.cmbPeople.KeyDown += new KeyEventHandler(cmb_KeyDown);
-            frm.cmbBoss.KeyDown += new KeyEventHandler(cmb_KeyDown);
-
         }
         private void desenfoque_abrir_formulario()
         {
@@ -113,25 +120,46 @@ namespace Capa_Controlador
             frm.cmbTurn.ValueMember = "id";
 
         }
-        private void read_people()
-        {
-            frm.cmbPeople.DataSource = pxy_empleado.LIST_PEOPLE();
-            frm.cmbPeople.DisplayMember = "nombre";
-            frm.cmbPeople.ValueMember = "rfc";
-
-        }
-        private void read_boss()
-        {
-            frm.cmbBoss.DataSource = pxy_empleado.LIST_PEOPLE();
-            frm.cmbBoss.DisplayMember = "nombre";
-            frm.cmbBoss.ValueMember = "rfc";
-
-        }
-
         private void cmb_KeyDown(object sender, KeyEventArgs e)
         {
             // ComboBox is readonly 
             e.SuppressKeyPress = true;
+        }
+        private void read_empleado(object sender = null, EventArgs e = null)
+        {
+            frm.txtEmpleado.Text = nombre_persona;
+        }
+        private void btnSelectEmpleado_Click(object sender, EventArgs e)
+        {
+            frm_select_people = new C_persona_select();
+
+            using (frm_people_select select_persona = frm_select_people.getFormulario())
+            {
+                desenfoque_abrir_formulario();
+
+                select_persona.btnSelect.Click += new EventHandler(read_empleado);
+                select_persona.ShowDialog();
+
+                overlayForm.Dispose();
+            }
+        }
+        private void read_jefe(object sender = null, EventArgs e = null)
+        {
+            frm.txtJefeInmediato.Text = nombre_jefe;
+        }
+        private void btnSelectJefe_Click(object sender, EventArgs e)
+        {
+            frm_select_boss = new C_jefe_select();
+
+            using (frm_boss_select select_jefe = frm_select_boss.getFormulario())
+            {
+                desenfoque_abrir_formulario();
+
+                select_jefe.btnSelect.Click += new EventHandler(read_jefe);
+                select_jefe.ShowDialog();
+
+                overlayForm.Dispose();
+            }
         }
         private void ptbMinimize_Click(object sender, EventArgs e)
         {
@@ -152,8 +180,8 @@ namespace Capa_Controlador
         {
             if (valida.CampoObligatorio(frm.pnlContent))
             {
-                vo_empleado.Rfc_persona = frm.cmbPeople.SelectedValue.ToString();
-                vo_empleado.Rfc_jefe = frm.cmbBoss.SelectedValue.ToString();
+                vo_empleado.Rfc_persona = rfc_persona;
+                vo_empleado.Rfc_jefe = rfc_jefe;
 
                 vo_empleado.Puesto = Convert.ToInt16(frm.cmbPost.SelectedValue.ToString());
                 vo_empleado.Sucursal = Convert.ToInt16(frm.cmbOffice.SelectedValue.ToString());
@@ -205,8 +233,6 @@ namespace Capa_Controlador
             frm.cmbPost.Text = mensaje_puesto;
             frm.cmbOffice.Text = mensaje_sucursal;
             frm.cmbTurn.Text = mensaje_turno;
-            frm.cmbPeople.Text = mensaje_persona;
-            frm.cmbBoss.Text = mensaje_jefe;
         }
 
     }

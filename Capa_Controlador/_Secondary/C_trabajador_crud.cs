@@ -26,8 +26,8 @@ namespace Capa_Controlador
         C_message c_message;
         C_persona_select frm_select_people;
 
-        public static string rfc_trabajador;
-        public static string nombre_trabajador;
+        public static string rfc_persona;
+        public static string nombre_persona;
 
         Capa_Vista.frm_woker_crud frm;
         frm_blur overlayForm;
@@ -52,7 +52,7 @@ namespace Capa_Controlador
                 vo_trabajador.Operacion = trabajador.Operacion;
                 
                 mensaje_sucursal = trabajador.Sucursal.ToString();
-                rfc_trabajador = trabajador.Rfc;
+                rfc_persona = trabajador.Rfc;
                 frm.txtTrabajador.Text = trabajador.Persona;
                 frm.txtRating.Text = trabajador.Calificacion.ToString();
                 frm.cmbEstado.Text = trabajador.Estado.ToString();
@@ -102,18 +102,18 @@ namespace Capa_Controlador
         }
         private void read_trabajador(object sender = null, EventArgs e = null)
         {
-            frm.txtTrabajador.Text = nombre_trabajador;
+            frm.txtTrabajador.Text = nombre_persona;
         }
         private void btnSelectPeople_Click(object sender, EventArgs e)
         {
             frm_select_people = new C_persona_select();
 
-            using (frm_people_select select_cliente = frm_select_people.getFormulario())
+            using (frm_people_select select_persona = frm_select_people.getFormulario())
             {
                 desenfoque_abrir_formulario();
 
-                select_cliente.btnSelect.Click += new EventHandler(read_trabajador);
-                select_cliente.ShowDialog();
+                select_persona.btnSelect.Click += new EventHandler(read_trabajador);
+                select_persona.ShowDialog();
 
                 overlayForm.Dispose();
             }
@@ -144,7 +144,7 @@ namespace Capa_Controlador
         {
             if (valida.CampoObligatorio(frm.pnlContent))
             {
-                vo_trabajador.Persona = rfc_trabajador;
+                vo_trabajador.Persona = rfc_persona;
                 vo_trabajador.Estado = frm.cmbEstado.SelectedItem.ToString();
 
                 vo_trabajador.Sucursal = Convert.ToInt16(frm.cmbOffice.SelectedValue.ToString());

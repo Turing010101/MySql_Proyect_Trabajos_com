@@ -9,6 +9,8 @@ namespace Capa_Modelo._VO
         int clave;
         string rfc_persona;
         string rfc_jefe;
+        string nombre_persona;
+        string nombre_jefe;
         object puesto;
         object turno;
         object sucursal;
@@ -23,6 +25,7 @@ namespace Capa_Modelo._VO
         public object Sucursal { get => sucursal; set => sucursal = value; }
         public string Operacion { get => operacion; set => operacion = value; }
         public string Expresion { get => expresion; set => expresion = value; }
-
+        public string Nombre_persona { get => nombre_persona; set => nombre_persona = value; }
+        public string Nombre_jefe { get => nombre_jefe; set => nombre_jefe = value; }
     }
 }
